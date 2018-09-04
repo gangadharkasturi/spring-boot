@@ -1,0 +1,40 @@
+spring:
+  profiles:
+    active: dev
+
+---   
+spring:
+  profiles: dev
+    
+    
+
+server:
+  port: 9090
+course:
+  chapterCount : 5
+  college: Osmania University
+  name: Spring Maven
+  duration: 60 days
+default:
+  course:
+      name: My defalut course
+      chapterCount: 22
+      
+logging:
+  file: mylog.log
+---
+spring:
+  profiles:qa
+
+server:
+  port: 9097
+course:
+  chapterCount : 6
+  college: Osmania University_
+  name: Spring Maven_
+  duration: 60 days_
+default:
+  course:
+      name: My defalut course_
+      chapterCount: 21
+      
