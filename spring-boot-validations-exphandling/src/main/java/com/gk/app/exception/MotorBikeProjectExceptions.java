@@ -25,7 +25,7 @@ public class MotorBikeProjectExceptions extends ResponseEntityExceptionHandler {
 	}
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	@ExceptionHandler(MotorBikeNotFoundException.class)//this method handles all the exceptions
+	@ExceptionHandler(MotorBikeNotFoundException.class)//If the motorbike with the id is not found, then this will handle that exception
 	public final ResponseEntity<Object> mtrBikeNtFoundExceptions(MotorBikeNotFoundException ex, WebRequest request) throws Exception {
 		ExpResponse expResponse = new ExpResponse(new Date(), "MotorBike Not FOUND",ex.getMessage(), request.getContextPath());
 		return new ResponseEntity(expResponse,HttpStatus.NOT_FOUND);
