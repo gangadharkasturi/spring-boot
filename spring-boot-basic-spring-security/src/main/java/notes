@@ -1,0 +1,24 @@
+add spring security dependency added to the pom.xml.
+Once spring boot loads, it checks the jars available in the classpath, so if spring security jars are
+available then it will auto configures the spring security and places a passowrd in the logs.
+
+with that password we can access the rest api.
+i.e. now the rest api is secured with spring security.
+
+defualt username is user.
+
+While sending the request to rest api from postman, pls give authentication info of the api.
+Then only it will give the response, otherwise it will give a error as unauthorized.
+
+
+If u want to configure custom username and password, please give the following properites in application.properties
+
+after 2.0.0 version
+
+spring.security.user.name=gangadhar
+spring.security.user.password=nani
+
+before 2.0.0 version
+
+security.user.name=gangadhar
+security.user.password=nani
